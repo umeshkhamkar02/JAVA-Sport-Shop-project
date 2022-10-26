@@ -1,0 +1,1212 @@
+import java.util.*;
+
+
+
+//super-most class
+class SShop
+{
+  String brand;
+  Double price;
+  String colour;
+
+  private String Cname;
+  private long CMonumber;
+  private String Address;
+
+  public void setCname(String Cname)
+  {
+      this.Cname=Cname;
+  }
+
+  public String getCname()
+  {
+      return Cname;
+  }
+
+  public void setCMonumber(long CMonumber)
+  {
+      this.CMonumber=CMonumber;
+  }
+
+
+  public long getCMonumber()
+  {
+      return CMonumber;
+  }
+
+
+  public void setAddress(String Address)
+  {
+      this.Address=Address;
+  }
+
+
+  public String getAddress()
+  {
+      return Address;
+  }
+
+
+  public void Pass(String brand,double price,String Colour)
+  {
+      this.brand=brand;
+      this.price=price;
+      this.colour=colour;
+  }
+  public void FinalDetails()
+  {
+      System.out.println(brand);
+      System.out.println(price);
+      System.out.println(colour);
+  }
+}
+
+class Details
+{
+  public void set_Details(String brand,double price,String colour)
+  {
+      SShop b=new SShop();
+
+      b.Pass(brand,price,colour);
+      b.FinalDetails();
+  }
+}
+
+//=======================================================================================
+class Cricket extends SShop
+{
+  public void CK()
+  {
+      System.out.println("=================");
+      System.out.println("PRESS 1 FOR CRICKET BATS");
+      System.out.println("PRESS 2 FOR PADS");
+      System.out.println("PRESS 3 FOR HELMET");
+      System.out.println("PRESS 4 FOR GLOVES");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("WELCOME TO BAT COLLECTION");
+              Cricket b=new Cricket();
+              b.Bat();
+              break;
+
+          case 2:
+              System.out.println("WELCOME TO PADS COLLECTION");
+              Cricket p=new Cricket();
+              p.pads();
+              break;
+
+          case 3:
+              System.out.println("WELCOME TO HELMET COLLECTION");
+              Cricket h=new Cricket();
+              h.helmet();
+              break;
+
+          case 4:
+              System.out.println("WELCOME TO GLOVES COLLECTION");
+              Cricket g=new Cricket();
+              g.gloves();
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER VALID INPUT");
+
+              break;
+      }
+  }
+  public void Bat()
+  {
+      System.out.println("--------------------");
+      System.out.println("press 1 for MRF");
+      System.out.println("press 2 for NEW BALANCE");
+      System.out.println("press 3 for SG");
+      System.out.println("press 4 for SPARTAN");
+
+
+
+      Scanner sc=new Scanner(System.in);
+      System.out.println("ENTER CRICKET BRAND NAME");
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED MRF");
+              System.out.println("--------------------------------");
+              System.out.println("*****FEATURES OF MRF*****");
+              System.out.println("PRICE:INR 9999");
+              System.out.println("SIZE:SHORT HANDLE");
+              System.out.println("MATERIAL:WOOD");
+              Payment b=new Payment();
+              b.Pay();
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED NEW BALANCE");
+              System.out.println("--------------------------------");
+              System.out.println("********FEATURES NEW BALANCE********");
+              System.out.println("PRICE:INR 7899");
+              System.out.println("SIZE:SHORT HANDLE");
+              System.out.println("MATERIAL:WOOD");
+              Payment c=new Payment();
+              c.Pay();
+              break;
+
+          case 3:
+              System.out.println("YOU HAVE SELECTED SG");
+              System.out.println("--------------------------------");
+              System.out.println("********FEATURES NEW SG********");
+              System.out.println("PRICE:6549");
+              System.out.println("SIZE:SHORT HANDLE");
+              System.out.println("MATERIAL:ENGLISH-WILLOW");
+              Payment d=new Payment();
+              d.Pay();
+              break;
+
+          case 4:
+              System.out.println("YOU HAVE SELECTED SPARTAN");
+              System.out.println("--------------------------------");
+              System.out.println("********FEATURES NEW SPARTAN********");
+              System.out.println("price:4741");
+              System.out.println("SIZE:SHORT HANDLE");
+              System.out.println("MATERIAL:ENGLISH-WILLOW");
+              Payment e=new Payment();
+              e.Pay();
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER THE VALID INPUT");
+
+              break;
+
+      }
+  }
+  public void pads()
+  {
+      System.out.println("--------------------");
+      System.out.println("press 1 for SG");
+      System.out.println("press 2 for PUMA");
+      System.out.println("press 3 for NEOSTRIKE");
+
+
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter the value for Cricket pads");
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("you have selected SG");
+              System.out.println("--------------------------------");
+              System.out.println("features of SG PADS");
+              System.out.println("price:1098");
+              System.out.println("Item Dimensions:LxWxH 15x15x45 Centimeters");
+              System.out.println("Material:PVC");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("you have selected PUMA");
+              System.out.println("--------------------------------");
+              System.out.println("features of PUMA PADS");
+              System.out.println("price:1799");
+              System.out.println("Item Dimensions:LxWxH 20x10x20 Centimeters");
+              System.out.println("Material:PU");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("you have selected NEOSTRIKE");
+              System.out.println("--------------------------------");
+              System.out.println("features of NEOSTRIKE PADS");
+              System.out.println("price:1999");
+              System.out.println("Item Dimensions:LxWxH 20x10x20 Centimeters");
+              System.out.println("Material:PU");
+              Payment d=new Payment();
+              d.Pay();
+
+              break;
+
+          default:
+              System.out.println("Please enter valid input");
+              break;
+      }
+  }
+  public void helmet()
+  {
+      System.out.println("--------------------");
+      System.out.println("press 1 for DSC");
+      System.out.println("press 2 for SHREY");
+      System.out.println("press 3 for SG");
+
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter the value for Cricket helmet");
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("you have selected DSC");
+              System.out.println("--------------------------------");
+              System.out.println("features of DSC HELMET");
+              System.out.println("Colour:Navy");
+              System.out.println("Size:2XS");
+              System.out.println("Outer Material:Fibreglass,Polypropylene");
+              System.out.println("Price:1050");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("you have selected SHREY");
+              System.out.println("--------------------------------");
+              System.out.println("features of SHREY HELMET");
+              System.out.println("Colour:Green");
+              System.out.println("Size:L");
+              System.out.println("Outer Material:Acrylonitrile Butadiene Styrene");
+              System.out.println("Price:1394");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("you have selected SG");
+              System.out.println("--------------------------------");
+              System.out.println("features of SG HELMET");
+              System.out.println("Colour:Multicolour");
+              System.out.println("Size:Extra Large/XL");
+              System.out.println("Outer Material:Polypropylene");
+              System.out.println("Price:1249");
+              Payment d=new Payment();
+              d.Pay();
+
+              break;
+
+          default:
+              System.out.println("Please enter valid input");
+
+              break;
+
+      }
+  }
+  public void gloves()
+  {
+      System.out.println("--------------------");
+      System.out.println("press 1 for PUMA");
+      System.out.println("press 2 for NEOSTRIKE");
+      System.out.println("press 3 for SG");
+
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter the value for Cricket gloves");
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("you have selected PUMA");
+              System.out.println("--------------------------------");
+              System.out.println("features of PUMA GLOVES");
+              System.out.println("Colour:Ethereal Blue-Puma Black-Silver");
+              System.out.println("Size:M");
+              System.out.println("Price:1699");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("you have selected NEOSTRIKE");
+              System.out.println("--------------------------------");
+              System.out.println("features of NEOSTRIKE GLOVES");
+              System.out.println("Colour:white and black");
+              System.out.println("Size:M");
+              System.out.println("Price:860");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("you have selected SG");
+              System.out.println("--------------------------------");
+              System.out.println("features of SG GLOVES");
+              System.out.println("Colour:Ethereal Blue-Puma Black-Silver");
+              System.out.println("Size:junior");
+              System.out.println("Price:749");
+              Payment d=new Payment();
+              d.Pay();
+
+              break;
+
+          default:
+              System.out.println("Please enter valid input");
+      }
+  }
+  public void Cjersey()
+  {
+      System.out.println("=================");
+      System.out.println("PRESS 1 FOR INDIA TEAM JERSEY");
+      System.out.println("PRESS 2 FOR AUSTRALIA TEAM JERSEY");
+      System.out.println("PRESS 3 FOR NEW ZEALAND TEAM JERSEY");
+      System.out.println("PRESS 4 FOR BANGLADESH TEAM JERSEY");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED INDIAN TEAM JERSEY");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF INDIAN TEAM JERSEY");
+              System.out.println("COLOUR:BLUE");
+              System.out.println("SIZE:M/L/XL");
+              System.out.println("PRICE:2499 INR");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED AUSTRALIAN TEAM JERSEY");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF AUSTRALIAN TEAM JERSEY");
+              System.out.println("COLOUR:YELLOW AND GREEN");
+              System.out.println("SIZE:M/L/XL");
+              System.out.println("PRICE:2399 INR");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("YOU HAVE SELECTED NEW ZEALAND TEAM JERSEY");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF NEW ZEALAND TEAM JERSEY");
+              System.out.println("COLOUR:BLACK");
+              System.out.println("SIZE:M/L/XL");
+              System.out.println("PRICE:1999 INR");
+              Payment d=new Payment();
+              d.Pay();
+
+              break;
+
+          case 4:
+              System.out.println("YOU HAVE SELECTED BANGLADESH TEAM JERSEY");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF BANGLADESH TEAM JERSEY");
+              System.out.println("COLOUR:GREEN");
+              System.out.println("SIZE:M/L/XL");
+              System.out.println("PRICE:1499 INR");
+              Payment e=new Payment();
+              e.Pay();
+
+              break;
+
+          default:
+              System.out.println("Please enter valid input");
+
+              break;
+      }
+  }
+  public void Cshoes()
+  {
+      System.out.println("=================");
+      System.out.println("PRESS 1 FOR PUMA CRICKET SHOES");
+      System.out.println("PRESS 2 FOR DSC CRICKET SHOES");
+      System.out.println("PRESS 3 FOR ADIDAS CRICKET SHOES");
+      System.out.println("PRESS 4 FOR NEW BALANCE CRICKET SHOES");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED PUMA CRICKET SHOES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF PUMA SHOES");
+              System.out.println("COLOUR:CLOUD WHITE/WILD TEAL/ACID YELLOW");
+              System.out.println("ITEM DIMENSIONS:LxWxH 25.5x19.5x10 CENTIMETERS");
+              System.out.println("PRICE:6299 INR");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED DSC CRICKET SHOES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF DSC SHOES");
+              System.out.println("COLOUR:CLOUD WHITE/LIME-YELLOW");
+              System.out.println("ITEM DIMENSIONS:10 UK");
+              System.out.println("PRICE:3999 INR");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("YOU HAVE SELECTED ADIDAS CRICKET SHOES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF ADIDAS SHOES");
+              System.out.println("COLOUR:WHITE/WILD TEAL/ACID YELLOW");
+              System.out.println("ITEM DIMENSIONS:10 UK");
+              System.out.println("PRICE:4975 INR");
+              Payment e=new Payment();
+              e.Pay();
+
+              break;
+
+          case 4:
+              System.out.println("YOU HAVE SELECTED NEW BALANCE CRICKET SHOES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF ADIDAS SHOES");
+              System.out.println("COLOUR:WHITE");
+              System.out.println("ITEM DIMENSIONS:9 UK");
+              System.out.println("PRICE:2499 INR");
+              Payment f=new Payment();
+              f.Pay();
+
+              break;
+
+          default:
+              System.out.println("Please enter valid input");
+
+              break;
+
+      }
+  }
+}
+
+
+
+
+
+//
+////============================================================================
+class Football extends SShop
+{
+  public void FB()
+  {
+      System.out.println("--------------------");
+      System.out.println("press 1 for NIKE FOOTBALL");
+      System.out.println("press 2 for WILSON FOOTBALL");
+      System.out.println("press 3 for ADIDAS FOOTBALL");
+      System.out.println("press 4 for NIVIA FOOTBALL");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED NIKE FOOTBALL");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF NIKE FOOTBALL");
+              System.out.println("COLOUR:BRIGHT CRIMSON/BLACK");
+              System.out.println("MATERIAL:60% RUBBER;15% POLYURETHANE;13% POLYSTER;12% EVA");
+              System.out.println("PRICE:4845 INR");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED WILSON FOOTBALL");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF WILSON FOOTBALL");
+              System.out.println("COLOUR:BLUE/WHITE");
+              System.out.println("MATERIAL:RUBBER");
+              System.out.println("PRICE:5040 INR");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("YOU HAVE SELECTED ADIDAS FOOTBALL");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF ADIDAS FOOTBALL");
+              System.out.println("COLOUR:WHITE/PANTONE");
+              System.out.println("MATERIAL:RUBBER");
+              System.out.println("PRICE:3599 INR");
+              Payment d=new Payment();
+              d.Pay();
+
+              break;
+
+          case 4:
+              System.out.println("YOU HAVE SELECTED NIVIA FOOTBALL");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF NIVIA FOOTBALL");
+              System.out.println("COLOUR:WHITE/BLACK");
+              System.out.println("MATERIAL:PU");
+              System.out.println("PRICE:4399 INR");
+              Payment e=new Payment();
+              e.Pay();
+
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER VALID INPUT");
+
+              break;
+
+
+      }
+
+  }
+  public void Cfb()
+  {
+      System.out.println("=================");
+      System.out.println("PRESS 1 FOR GLOVES");
+      System.out.println("PRESS 2 FOR SHOULDER PADS");
+      System.out.println("PRESS 3 FOR SLEEVES");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED FOOTBALL GLOOVES");
+              Football g=new Football();
+              g.Fgloves();
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED SHOULDER PADS");
+              Football f=new Football();
+              f.Fpads();
+              break;
+
+          case 3:
+              System.out.println("YOU HAVE SELECTED FOOTBALL SLEEVES");
+              Football s=new Football();
+              s.Fsleeves();
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER VALID INPUT");
+
+              break;
+
+      }
+
+  }
+  public void Fgloves()
+  {
+      System.out.println("--------------------");
+      System.out.println("press 1 for TITLEST GLOVES");
+      System.out.println("press 2 for UNDER ARMOUR GLOVES");
+      System.out.println("press 3 for NIVIA GLOVES");
+      System.out.println("press 4 for ADIDAS GLOVES");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED TITLEST GLOVES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF TITLEST GLOVES");
+              System.out.println("COLOUR:WHITE/BLACK");
+              System.out.println("MATERIAL:CABRETTA LEATHER");
+              System.out.println("PRICE:1495 INR");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED UNDER ARMOUR GLOVES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF UNDER ARMOUR GLOVES");
+              System.out.println("COLOUR:SILVER/BLACK");
+              System.out.println("MATERIAL:POLYSTER");
+              System.out.println("PRICE:2999 INR");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("YOU HAVE SELECTED NIVIA GLOVES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF NIVIA GLOVES");
+              System.out.println("COLOUR:BLUE/BLACK");
+              System.out.println("MATERIAL:SYNTHETIC");
+              System.out.println("PRICE:999 INR");
+              Payment d=new Payment();
+              d.Pay();
+
+              break;
+
+          case 4:
+              System.out.println("YOU HAVE SELECTED ADIDAS GLOVES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF ADIDAS GLOVES");
+              System.out.println("COLOUR:BLUE/BLACK");
+              System.out.println("MATERIAL:POLYSTER/RUBBER");
+              System.out.println("PRICE:1475 INR");
+              Payment e=new Payment();
+              e.Pay();
+
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER VALID INPUT");
+
+              break;
+      }
+  }
+  public void Fpads()
+  {
+      System.out.println("--------------------");
+      System.out.println("press 1 for VECTOR PADS");
+      System.out.println("press 2 for ADIDAS PADS");
+      System.out.println("press 3 for NIVIA PADS");
+      System.out.println("press 4 for MATTZIG PADS");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED VECTOR PADS");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF VECTOR PADS");
+              System.out.println("COLOUR:MULTICOLOUR");
+              System.out.println("MATERIAL:POLYPROPYLENE");
+              System.out.println("PRICE:320 INR");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED ADIDAS PADS");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF ADIDAS PADS");
+              System.out.println("COLOUR:BLACK/WHITE/SOLAR YELLOW");
+              System.out.println("MATERIAL:95%POLYPROPYLENE,5%TPR");
+              System.out.println("PRICE:499 INR");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("YOU HAVE SELECTED NIVIA PADS");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF NIVIA PADS");
+              System.out.println("COLOUR:BLACK/WHITE");
+              System.out.println("MATERIAL:LYCRA-SPANDEX");
+              System.out.println("PRICE:199 INR");
+              Payment d=new Payment();
+              d.Pay();
+
+              break;
+
+          case 4:
+              System.out.println("YOU HAVE SELECTED MATTZIG PADS");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF MATTZIG PADS");
+              System.out.println("COLOUR:BLACK");
+              System.out.println("MATERIAL:POLYPROPYLENE");
+              System.out.println("PRICE:159 INR");
+              Payment e=new Payment();
+              e.Pay();
+
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER VALID INPUT");
+
+              break;
+      }
+  }
+  public void Fsleeves()
+  {
+
+      System.out.println("--------------------");
+      System.out.println("press 1 for MATTZIG SLEEVES");
+      System.out.println("press 2 for DATZO SLEEVES");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED MATTZIG SLEEVES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF MATTZIG SLEEVES");
+              System.out.println("COLOUR:BLACK");
+              System.out.println("MATERIAL:NYLON");
+              System.out.println("PRICE:199 INR");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED DATZO SLEEVES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF DATZO SLEEVES");
+              System.out.println("COLOUR:BLACK");
+              System.out.println("MATERIAL:NYLON");
+              System.out.println("PRICE:99 INR");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER VALID INPUT");
+
+              break;
+      }
+  }
+  public void Fshoes()
+  {
+      System.out.println("=================");
+      System.out.println("PRESS 1 FOR NIVIA FOOTBALL SHOES");
+      System.out.println("PRESS 2 FOR VECTOR FOOTBALL SHOES");
+      System.out.println("PRESS 3 FOR SEGA FOOTBALL SHOES");
+      System.out.println("PRESS 4 FOR NEW AXPRO FOOTBALL SHOES");
+
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED NIVIA FOOTBALL SHOES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF NIVIA SHOES");
+              System.out.println("COLOUR:RED/BLACK");
+              System.out.println("SIZE:10 UK");
+              System.out.println("MATERIAL:SYNTHETIC");
+              System.out.println("PRICE:6299 INR");
+              Payment b=new Payment();
+              b.Pay();
+
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED VECTOR FOOTBALL SHOES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF VECTOR SHOES");
+              System.out.println("COLOUR:WHITE/GOLD");
+              System.out.println("SIZE:09 UK");
+              System.out.println("MATERIAL:SYNTHETIC LEATHER");
+              System.out.println("PRICE:3499 INR");
+              Payment c=new Payment();
+              c.Pay();
+
+              break;
+
+          case 3:
+              System.out.println("YOU HAVE SELECTED SEGA FOOTBALL SHOES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF SEGA SHOES");
+              System.out.println("COLOUR:WHITE/YELLOW");
+              System.out.println("SIZE:10 UK");
+              System.out.println("MATERIAL:FAUX LEATHER,THERMOPLASTIC POLYURETHANE");
+              System.out.println("PRICE:2475 INR");
+              Payment d=new Payment();
+              d.Pay();
+
+              break;
+
+          case 4:
+              System.out.println("YOU HAVE SELECTED NEW AXPRO FOOTBALL SHOES");
+              System.out.println("--------------------------------");
+              System.out.println("FEATURES OF NEW AXPRO SHOES");
+              System.out.println("COLOUR:BLUE");
+              System.out.println("SIZE:10 UK");
+              System.out.println("MATERIAL:SYNTHETIC");
+              System.out.println("PRICE:4999 INR");
+              Payment e=new Payment();
+              e.Pay();
+
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER VALID INPUT");
+
+              break;
+      }
+  }
+}
+//=========================================================================================================
+class Basketball extends SShop
+{
+  public void Hk()
+  {
+      System.out.println("WELCOME TO BASKETBALL SECTION");
+
+      Basketball h=new Basketball();
+
+      //UP-CASTING
+      Basketball a1=new Basketballs();
+      //DOWN-CASTING
+      Basketballs b1=(Basketballs)a1;
+
+
+      System.out.println("ENTER 1 FOR BASKETBALLS");
+      System.out.println("ENTER 2 FOR BASKETBALL RINGS");
+
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              Basketballs k=new Basketballs();
+              k.Bball();
+              break;
+
+          case 2:
+              Brings b=new Brings();
+              b.Rings();
+              break;
+
+          default:
+
+              break;
+      }
+
+
+  }
+}
+
+class Basketballs extends Basketball
+{
+  public void Bball()
+  {
+
+
+      Details d= new Details();
+
+
+      System.out.println("ENTER 1 FOR NIVIA ENGRAVER");
+      System.out.println("ENTER 2 FOR ADIDAS");
+      System.out.println("ENTER 3 FOR COSCO");
+
+
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("THANKS FOR SELECTING NIVIA ENGRAVER BASKETBALLS");
+              System.out.println("===============================================");
+              d.set_Details("NIVIA ENGRAVER",1599.0,"RED");
+              Payment b=new Payment();
+              b.Pay();
+              break;
+
+          case 2:
+              System.out.println("THANKS FOR SELECTING ADIDAS BASKETBALLS");
+              System.out.println("=======================================");
+              d.set_Details("ADIDAS",2999.0,"ORANGE");
+              Payment c=new Payment();
+              c.Pay();
+              break;
+
+          case 3:
+              System.out.println("THANKS FOR SELECTING COSCO BASKETBALLS");
+              System.out.println("======================================");
+              d.set_Details("COSCO",999.0,"BLACK");
+              Payment s=new Payment();
+              s.Pay();
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER A VALID INPUT");
+              Basketballs k=new Basketballs();
+              k.Bball();
+      }
+  }
+}
+class Brings extends Basketball
+{
+  public void Rings()
+  {
+      Details d= new Details();
+
+
+      System.out.println("ENTER 1 FOR AZONE BASKETBALL RINGS");
+      System.out.println("ENTER 2 FOR RAISCO BASKETBALL RINGS");
+      System.out.println("ENTER 3 FOR EIK POWER BASKETBALL RINGS");
+
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("THANKS FOR SELECTING AZONE BASKETBALL RINGS");
+              System.out.println("===========================================");
+              d.set_Details("AZONE",1599.0,"ORANGE");
+              Payment b=new Payment();
+              b.Pay();
+              break;
+
+          case 2:
+              System.out.println("THANKS FOR SELECTING RAISCO BASKETBALL RINGS");
+              System.out.println("===========================================");
+              d.set_Details("RAISCO",2999.0,"RED");
+              Payment c=new Payment();
+              c.Pay();
+              break;
+
+          case 3:
+              System.out.println("THANKS FOR SELECTING EIK POWER BASKETBALL RINGS");
+              System.out.println("===========================================");
+              d.set_Details("EIK POWER",1875.0,"BLUE");
+              Payment g=new Payment();
+              g.Pay();
+              break;
+
+          default:
+              System.out.println("PLEASE ENTER A VALID INPUT");
+              Brings r=new Brings();
+              r.Rings();
+      }
+
+  }
+}
+//=======================================================================================
+class Payment extends SShop
+{
+  public void Pay()
+  {
+      System.out.println("============================================");
+      System.out.println("PLEASE SELECT PAYMENT METHOD YOU WANT");
+      System.out.println("PRESS 1 FOR UPI");
+      System.out.println("PRESS 2 FOR CASH");
+
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("YOU HAVE SELECTED UPI PAYMENT METHOD");
+              Payment b=new Payment();
+              b.Upi();
+              break;
+
+          case 2:
+              System.out.println("YOU HAVE SELECTED CASH MODE");
+              Payment c=new Payment();
+              c.Cash();
+              break;
+
+        
+
+
+      }
+
+  }
+  public void Upi()
+  {
+
+      System.out.println("============================");
+      System.out.println("PLEASE ENTER YOUR MOBILE NUMBER");
+      Scanner sc=new Scanner(System.in);
+      long n=sc.nextLong();
+
+      System.out.println("PLEASE ENTER YOUR UPI ID");
+      Scanner s=new Scanner(System.in);
+      String o=s.nextLine();
+
+      System.out.println("ENTER THE AMOUNT OF YOUR BILL");
+      Scanner c=new Scanner(System.in);
+      double l=c.nextDouble();
+
+      System.out.println("ENTER 4 DIGIT OTP YOU HAVE RECIEVED");
+      Scanner scr=new Scanner(System.in);
+      long g=scr.nextLong();
+
+      System.out.println("YOUR PAYMENT IS DONE!");
+      System.out.println("\nTHANKS FOR SHOPPING WITH US! DO VISIT US AGAIN!");
+
+
+
+
+  }
+  public void Cash()
+  {
+      System.out.println("============================");
+      System.out.println("\nPLEASE VISIT OUR SHOP NEAR YOUR HOME FOR PAYMENT");
+      System.out.println("THANKS FOR YOUR TIME! PLESE VISIT US AGAIN!");
+  }
+}
+
+
+
+
+
+
+
+
+//=======================================================================================
+public class Driver3
+{
+  static
+  {
+      System.out.println("**********WELCOME TO OUR SPORTS SHOP**********");
+      System.out.println("\n==============================================");
+  }
+
+  public static void main(String[] args)
+  {
+      Cricket cricket=new Cricket();
+
+      Football football=new Football();
+
+      Basketball ref3=new Basketball();
+
+      Payment ref4=new Payment();
+
+      SShop a=new SShop();
+     
+
+      Scanner a2=new Scanner(System.in);
+      System.out.println("ENTER YOUR NAME: ");
+      String name=a2.nextLine();
+      a.setCname(name);
+
+      Scanner a3=new Scanner(System.in);
+      System.out.println("ENTER YOUR MOBILE NUMBER: ");
+      long MoNumber=a3.nextLong();
+      a.setCMonumber(MoNumber);
+
+      Scanner a4=new Scanner(System.in);
+      System.out.println("ENTER YOUR ADDRESS: ");
+      String Address=a4.nextLine();
+      a.setAddress(Address);
+
+
+
+      System.out.println("YOUR NAME IS= "+ a.getCname());
+      System.out.println("YOUR MOBILE NUMBER IS= "+ a.getCMonumber());
+      System.out.println("YOUR ADDRESS IS= "+ a.getAddress());
+
+
+
+      System.out.println("\nENTER 1 FOR CRICKET");
+      System.out.println("ENTER 2 FOR FOOTBALL");
+      System.out.println("ENTER 3 FOR BASKETBALL");
+      Scanner sc = new Scanner(System.in);
+      int n=sc.nextInt();
+
+
+      switch(n)
+      {
+          case 1:
+              System.out.println("WELCOME TO CRICKET SECTION");
+              System.out.println("==========================");
+              System.out.println("ENTER 1 FOR CRICKET KIT");
+              System.out.println("ENTER 2 FOR CRICKET JERSEY");
+              System.out.println("ENTER 3 FOR CRICKET SHOES");
+
+              Scanner s = new Scanner(System.in);
+              int r=s.nextInt();
+
+              switch(r)
+              {
+                  case 1:
+                      System.out.println("WELCOME TO CRICKET KIT SECTION");
+                      Cricket b=new Cricket();
+                      b.CK();
+                      break;
+
+                  case 2:
+                      System.out.println("WELCOME TO CRICKET JERSEY SECTION");
+                      Cricket e=new Cricket();
+                      e.Cjersey();
+                      break;
+
+                  case 3:
+                      System.out.println("WELCOME TO CRICKET SHOES SECTION");
+                      Cricket C=new Cricket();
+                      C.Cshoes();
+                      break;
+
+                  default:
+                      System.out.println("INPUT DOES NOT MATCH");
+
+                      main(args);
+
+              }
+              break;
+
+          case 2:
+              System.out.println("WELCOME TO FOOTBALL SECTION");
+              System.out.println("==========================");
+              System.out.println("ENTER 1 FOR FOOTBALLS");
+              System.out.println("ENTER 2 FOR FOOTBALL KITS");
+              System.out.println("ENTER 3 FOR FOOTBALL SHOES");;
+              Scanner ref = new Scanner(System.in);
+              int o=ref.nextInt();
+
+              switch(o)
+              {
+                  case 1:
+                      System.out.println("WELCOME TO FOOTBALLS SECTION");
+                      Football b=new Football();
+                      b.FB();
+                      break;
+
+                  case 2:
+                      System.out.println("WELCOME TO FOOTBALL KITS SECTION");
+                      Football c=new Football();
+                      c.Cfb();
+                      break;
+
+                  case 3:
+                      System.out.println("WELCOME TO FOOTBALL SHOES SECTION");
+                      Football h=new Football();
+                      h.Fshoes();
+                      break;
+
+                  default:
+                      System.out.println("INPUT DOES NOT MATCH");
+                      main(args);
+                      break;
+              }
+
+              break;
+
+          case 3:
+              Basketball h=new Basketball();
+              h.Hk();
+
+              break;
+
+          default:
+              System.out.println("INPUT DOES NOT MATCH");
+              main(args);
+      }
+
+  }
+}
